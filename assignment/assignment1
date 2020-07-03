@@ -1,0 +1,29 @@
+# Example1
+def get_address
+  users = User.includes(address: [:city]).where.not(addresses: {city: nil})
+  addresses = users.map(&:address)
+end
+
+#Example 2
+class Greeting
+  attr_accessor :name
+  def initialize(name)
+    @name = name
+  end
+end
+
+# Example 3
+def sum(*args)
+  arg_len = args.length
+  case arg_len
+  when 2
+    p args.sum
+  when 3
+    p args.sum
+  when 4
+    p args.sum
+  end
+end
+
+sum(2,3)
+sum(1,2,3,4)

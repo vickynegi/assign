@@ -1,0 +1,8 @@
+# Assignment 2
+class User < ApplicationRecord
+  enum status: [:active, :inactive, :pending]
+end
+
+# load the object of user such as @user = User.last
+# now call @user.active? or @user.inactive? or
+# @user.pending?, boolean value will come
